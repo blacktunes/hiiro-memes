@@ -1,0 +1,73 @@
+<template>
+  <div ref="wrapper">
+    <div class="memes-list" ref="list">
+      <a
+        v-for="item in memes"
+        :key="item"
+        class="memes"
+        :href="URL + decode(item)"
+        target="__black"
+      >
+        <img :src="URL + decode(item)" @load="onLoad" />
+      </a>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import Setting from '@/../setting/setting.json'
+import { ref, onMounted } from 'vue'
+
+const CDN = Setting['CDN']
+const URL = process.env.NODE_ENV === 'production' && CDN ? `${CDN}/` : '/memes/'
+
+const wrapper = ref()
+const list = ref()
+
+const decode = (str: string) => {
+  return str.replaceAll('%', '%25')
+}
+
+const memesList = require.context('@/../public/memes', false, /.*$/).keys().map(item => {
+  return item.substring(2)
+})
+
+const memes = ref(memesList)
+
+const onLoad = (el) => {
+  if (!el.path[0]) return
+  if (el.path[0].offsetHeight > 160) {
+    el.path[0].style.width = 'auto'
+    el.path[0].style.height = '100%'
+  }
+}
+
+const setWarpperWidth = () => {
+  list.value.style.width = (((wrapper.value.offsetWidth / 160) | 0) || 1) * 160 + 'px'
+}
+
+onMounted(() => {
+  setWarpperWidth()
+  window.onresize = () => {
+    setWarpperWidth()
+  }
+})
+</script>
+
+<style lang="stylus">
+.memes-list
+  display flex
+  flex-wrap wrap
+  margin auto
+
+  .memes
+    display flex
+    align-items center
+    justify-content center
+    height 160px
+    width 160px
+    background rgba(0,0,0,0.1)
+
+    img
+      width 100%
+</style>
