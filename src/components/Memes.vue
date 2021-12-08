@@ -8,7 +8,8 @@
         :href="URL + decode(item)"
         target="__black"
       >
-        <img :src="URL + decode(item)" @load="onLoad" />
+        <img src="@/assets/image/loading.png"
+        v-lazy="URL + decode(item)" @load="onLoad" />
       </a>
     </div>
   </div>
@@ -66,7 +67,7 @@ onMounted(() => {
     justify-content center
     height 160px
     width 160px
-    background rgba(0,0,0,0.1)
+    background rgba(0, 0, 0, 0.05)
 
     img
       width 100%
