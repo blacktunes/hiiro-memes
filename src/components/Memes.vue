@@ -26,7 +26,7 @@ const wrapper = ref()
 const list = ref()
 
 const decode = (str: string) => {
-  return str.replaceAll('%', '%25')
+  return str.replace(/%/g, '%25')
 }
 
 const memesList = require.context('@/../public/memes', false, /.*$/).keys().map(item => {
