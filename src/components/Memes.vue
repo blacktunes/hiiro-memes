@@ -9,7 +9,7 @@
         target="__black"
       >
         <img src="@/assets/image/loading.png"
-        v-lazy="URL + decode(item)" @load="onLoad" />
+        v-lazy="URL + decode(item)" @load="onLoad" @error.once="onError"/>
       </a>
     </div>
   </div>
@@ -43,6 +43,12 @@ const onLoad = (el) => {
   }
 }
 
+const onError = (event) => {
+  if (event?.path?.[0]) {
+    event.path[0].src = require('@/assets/image/loading.png').default
+  }
+}
+
 const setWarpperWidth = () => {
   list.value.style.width = (((wrapper.value.offsetWidth / 160) | 0) || 1) * 160 + 'px'
 }
@@ -67,7 +73,8 @@ onMounted(() => {
     justify-content center
     height 160px
     width 160px
-    background rgba(0, 0, 0, 0.05)
+    box-sizing border-box
+    border 1px solid rgba(0,0,0,0.05)
 
     img
       width 100%
