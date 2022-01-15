@@ -8,9 +8,13 @@ https://hii.hiiro.club
 
   随机获取一张Hii图，`Content-Type`为`text/html`，不能直接作为图片使用
 
-- https://hii.hiiro.club/api/v1/get_random
+- https://hii.hiiro.club/api/v1/get_random_meme
   
   随机获取一张Hii图，并重定向到图片的CDN地址，这将会改变URL
+
+- https://hii.hiiro.club/api/v1/get_all_memes
+
+  获取所有Hii图的URL
 
 ### LICENSE
 
