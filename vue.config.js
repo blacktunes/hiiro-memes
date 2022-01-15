@@ -1,5 +1,4 @@
 const path = require('path')
-const Memes = require('./plugins/memes')
 
 process.env.VUE_APP_LAST_UPDATE = Date.now()
 
@@ -23,9 +22,6 @@ module.exports = {
       config.optimization.minimizer[0].options.terserOptions.compress.pure_funcs = ['console.info']
     }
     return {
-      plugins: [
-        new Memes()
-      ],
       performance: {
         hints: false
       },
