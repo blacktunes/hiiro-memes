@@ -4,13 +4,13 @@ https://hii.hiiro.club
 
 ### API
 
-https://hii.hiiro.club/api/v1/random
+- https://hii.hiiro.club/api/v1/random
 
-随机获取一张Hii图，`Content-Type`为`text/html`
+  随机获取一张Hii图，`Content-Type`为`text/html`，不能直接作为图片使用
 
-若需要直接获取图片请加上参数`redirect`，这将会重定向到CDN
-
-https://hii.hiiro.club/api/v1/random?redirect
+- https://hii.hiiro.club/api/v1/get_random
+  
+  随机获取一张Hii图，并重定向到图片的CDN地址，这将会改变URL
 
 ### LICENSE
 
