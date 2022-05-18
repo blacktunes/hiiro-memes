@@ -57,5 +57,5 @@
     "imgWidth": "100%",
     "imgHeight": "56%"
   },
-  "CDN": "https://cdn.jsdelivr.net/gh/blacktunes/hiiro-memes@master/public/memes"
+  "CDN": "https://fastly.jsdelivr.net/gh/blacktunes/hiiro-memes@master/public/memes"
 }

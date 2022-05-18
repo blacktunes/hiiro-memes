@@ -20,7 +20,7 @@ export default (request: VercelRequest, response: VercelResponse) => {
       </head>
       
       <body style="margin: 0px;background: #0e0e0e;height: 100%;display: flex;align-items: center;justify-content: center;">
-        <img style="max-width: 100%;max-height: 100%;" src="https://cdn.jsdelivr.net/gh/blacktunes/hiiro-memes@master/public/memes/${random}" alt="">
+        <img style="max-width: 100%;max-height: 100%;" src="https://fastly.jsdelivr.net/gh/blacktunes/hiiro-memes@master/public/memes/${random}" alt="">
       </body>
       
       </html>
