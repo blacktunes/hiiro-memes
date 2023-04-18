@@ -6,19 +6,32 @@
     "twitter": "",
     "bilibili": "https://live.bilibili.com/21919321"
   },
-  "link": [
+  "related": [
     {
-      "name": "猫猫按钮",
-      "url": "https://hiiro.club/",
-      "background": "#F5C1BB"
+      "name": "Hiiro按钮",
+      "url": "https://hiiro.club/"
     },
     {
-      "name": "七奈按钮",
-      "url": "https://kaguranana.moe/",
+      "name": "Hiiropara",
+      "url": "https://hiiropara.hiiro.club/"
+    },
+    {
+      "name": "二创游戏",
+      "url": "https://store.steampowered.com/app/1907180"
+    },
+    {
+      "name": "录播文件分享站",
+      "url": "https://record.hiiro.fans"
+    }
+  ],
+  "link": [
+    {
+      "name": "七奈按钮(神楽七奈)",
+      "url": "https://kaguranana-button-blacktunes.vercel.app/",
       "background": "#c4afd0"
     },
     {
-      "name": "希亚娜按钮",
+      "name": "梦魇按钮(希亚娜Ciyana)",
       "url": "https://ciyana.moe/",
       "background": "#19368f",
       "color": "#eee"
@@ -34,6 +47,16 @@
       "url": "https://xysbtn.xiaoblogs.cn/",
       "background": "#cd3951",
       "color": "#eee"
+    },
+    {
+      "name": "Eliro按钮(彼岸霜滢)",
+      "url": "https://eliro.top/",
+      "background": "#BFB8FF"
+    },
+    {
+      "name": "希侑按钮",
+      "url": "https://kiyuu.club/",
+      "background": "#FF91AE"
     }
   ],
   "footer": {
@@ -44,8 +67,8 @@
       }
     ],
     "info": [
-      "<div>偶尔可能会发点更新信息的B站→<a href=\"https://space.bilibili.com/1384118\" target=\"_blank\">我想改个带咸鱼的名字</a></div>",
-      "<img style=\"margin: 5px 5px 0px -2px\" alt=\"GitHub Repo stars\" src=\"https://img.shields.io/github/stars/blacktunes/hiiro-memes?style=social\"><img style=\"margin-top: 5px\" alt=\"GitHub Repo license\" src=\"https://img.shields.io/github/license/blacktunes/hiiro-memes?style=social\">"
+      "<div>偶尔可能会发点更新信息的B站→<a href=\"https://space.bilibili.com/1384118\" target=\"_blank\">单推黑猫白雪的咸鱼</a></div>",
+      "<img style=\"margin: 5px 5px 0px -2px\" alt=\"GitHub Repo stars\" src=\"https://img.shields.io/github/stars/blacktunes/hiiro-button?style=social\"><img style=\"margin-top: 5px\" alt=\"GitHub Repo license\" src=\"https://img.shields.io/github/license/blacktunes/hiiro-button?style=social\">"
     ],
     "githubUrl": "https://github.com/blacktunes/hiiro-memes"
   },
@@ -57,5 +80,5 @@
     "imgWidth": "100%",
     "imgHeight": "56%"
   },
-  "CDN": "https://fastly.jsdelivr.net/gh/blacktunes/hiiro-memes@master/public/memes"
+  "CDN": ""
 }

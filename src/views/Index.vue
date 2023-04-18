@@ -5,6 +5,22 @@
         <Memes />
       </Card>
       <Card>
+        <div style="text-align: center">Hii图数量: {{ total }}</div>
+      </Card>
+      <Card v-if="RELATED.length > 0">
+        <div class="content">
+          <template v-for="item in RELATED" :key="item.name">
+            <Btn
+              class="btn"
+              :name="item.name"
+              :url="item.url"
+              :color="item.color"
+              :background="item.background"
+            />
+          </template>
+        </div>
+      </Card>
+      <Card v-if="LINK.length > 0">
         <div class="content">
           <Btn
             class="btn"
@@ -32,14 +48,21 @@ import Setting from '@/../setting/setting.json'
 import Btn from '@/components/common/Btn.vue'
 import Card from '@/components/common/Card.vue'
 import Memes from '@/components/Memes.vue'
+import memes from '@/../public/memes.json'
 
-// 友链列表
-const LINK: {
+export interface FriendlyLink {
   name: string;
   url: string;
   background?: string;
   color?: string;
-}[] = Setting['link'] || []
+}
+
+// 相关链接
+const RELATED: FriendlyLink[] = Setting['related'] || []
+// 友链列表
+const LINK: FriendlyLink[] = Setting['link'] || []
+
+const total = memes.length
 </script>
 
 <style lang="stylus" scoped>
