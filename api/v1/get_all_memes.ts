@@ -1,14 +1,10 @@
 import { VercelRequest, VercelResponse } from '@vercel/node'
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
 
-const list = fs.readdirSync(path.join(__dirname, '../../public/memes'))
+const list = JSON.parse(fs.readFileSync(path.join(__dirname, '../../public/memes.json'), 'utf-8'))
 
-for (const i in list) {
-  list[i] = `https://fastly.jsdelivr.net/gh/blacktunes/hiiro-memes@master/public/memes/${list[i]}`
-}
-
-export default (request: VercelRequest, response: VercelResponse) => {
+export default (_request: VercelRequest, response: VercelResponse) => {
   response
     .status(200)
     .send(list)
