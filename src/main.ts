@@ -11,6 +11,4 @@ createApp(App)
   .use(lazyload)
   .mount('#app')
 
-if (process.env.NODE_ENV !== 'development') {
-  inject()
-}
+inject()
