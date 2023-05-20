@@ -7,6 +7,29 @@
       <Card>
         <div style="text-align: center">Hii图数量: {{ total }}</div>
       </Card>
+      <Card>
+        <div style="text-align: center">随机Hii图</div>
+        <div style="text-align: center">
+          <a href="https://hii.hiiro.club/api/v1/random" target="_blank">
+            https://hii.hiiro.club/api/v1/random
+          </a>
+        </div>
+        <div style="text-align: center">随机Hii图链接</div>
+        <div style="text-align: center">
+          <a
+            href="https://hii.hiiro.club/api/v1/get_random_meme"
+            target="_blank"
+          >
+            https://hii.hiiro.club/api/v1/get_random_meme
+          </a>
+        </div>
+        <div style="text-align: center">全部Hii图链接</div>
+        <div style="text-align: center">
+          <a href="https://hii.hiiro.club/api/v1/get_all_memes" target="_blank">
+            https://hii.hiiro.club/api/v1/get_all_memes
+          </a>
+        </div>
+      </Card>
       <Card v-if="RELATED.length > 0">
         <div class="content">
           <template v-for="item in RELATED" :key="item.name">
