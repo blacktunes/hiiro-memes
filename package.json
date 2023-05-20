@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.1",
     "vue": "^3.2.6",
     "vue-router": "^4.0.11"
   },
